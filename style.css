@@ -1,0 +1,47 @@
+body
+{
+    background-image: url("img/bg.jpg");
+    background-size: cover;
+}
+.wrapp
+{
+    margin-top: 35px;
+}
+.spacing
+{
+    letter-spacing: 4px;
+    color: #8a2be2;
+}
+.card 
+{
+    border: 1px solid #8a2be2;
+    outline: none;
+}
+.cheader {
+    background-color: #8a2be2 !important;
+    border: 1px solid #8a2be2 !important;
+    outline: none !important;
+    color: #fff;
+}
+.form-control
+{
+    border: 1px solid #8a2be2;
+}
+.form-control::placeholder
+{
+    color: #8a2be2;
+}
+.submitbtn
+{
+    background-color: #8a2be2;
+    border: 1px solid #8a2be2;
+    outline: none;
+}
+.submitbtn:hover {
+    transition-timing-function:ease-in-out;
+    transition-duration: 1s;
+    background-color: #6c757d;
+    border: 1px solid #6c757d;
+    transition: ease-in 1s;
+    transition: ease-out 1s;
+  }
