@@ -24,7 +24,7 @@ To run this project locally, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/word-scramble.git
+   git clone https://github.com/Myself-Alien/Word-Scramble.git
    ```
 
 2. Navigate to the project directory:
@@ -44,7 +44,7 @@ Contributions are welcome! If you have suggestions for improvements or new featu
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+This project is licensed under the MIT License.
 
 ---
 
