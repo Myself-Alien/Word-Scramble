@@ -18,10 +18,9 @@
                 <div class="card-body">
                     
                     <?php
-                    // Create an array of words
                     $words = array("apple", "banana", "grape", "orange", "peach", "pear", "plum", "mango", "kiwi", "cherry", "pineapple", "watermelon", "raspberry", "fig", "blueberry", "blackberry", "papaya", "pomegranate", "strawberry", "lychee");
 
-                    // Function to shuffle letters of a word
+                 
                     function shuffleWord($word)
                     {
                         $letters = str_split($word);
@@ -29,10 +28,9 @@
                         return implode('', $letters);
                     }
 
-                    // Start session to store the original word
+                   
                     session_start();
 
-                    // Select a random word and shuffle it if not already set
                     if (!isset($_SESSION['originalWord'])) {
                         $randomIndex = array_rand($words);
                         $_SESSION['originalWord'] = $words[$randomIndex];
@@ -41,23 +39,19 @@
                     $originalWord = $_SESSION['originalWord'];
                     $shuffledWord = shuffleWord($originalWord);
 
-                    // Initialize message variable
                     $message = "";
 
-                    // Check if the form has been submitted
                     if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         if (isset($_POST['b2'])) {
                             $userGuess = trim($_POST['b1']);
                             if (strcasecmp($userGuess, $originalWord) == 0) {
                                 $message = "<p class='text-success'>" . "Correct! The word was: " . strtoupper($originalWord) . "<p>";
-                                // Optionally reset the game
                                 unset($_SESSION['originalWord']);
                             } else {
                                 $message = "<p class='text-danger'>" . "Incorrect! Try again." . "<p>";
                             }
                         } elseif (isset($_POST['refresh'])) {
-                            // Clear the message and reload the page to get a new word
-                            unset($_SESSION['originalWord']); // Clear the original word
+                            unset($_SESSION['originalWord']); 
                             header("Location: " . $_SERVER['PHP_SELF']);
                             exit();
                         }
@@ -78,7 +72,7 @@
     <script>
         function hidemsg() {
             var element = document.getElementById("message");
-            element.style.display = "none"; // Correctly hides the element
+            element.style.display = "none";
         }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
